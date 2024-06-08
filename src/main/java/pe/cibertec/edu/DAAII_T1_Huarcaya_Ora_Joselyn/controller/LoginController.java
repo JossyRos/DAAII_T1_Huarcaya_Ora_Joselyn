@@ -17,7 +17,7 @@ import pe.cibertec.edu.DAAII_T1_Huarcaya_Ora_Joselyn.service.UsuarioService;
 @RequestMapping("/auth")
 public class LoginController {
 
-    private UsuarioService usuarioService;
+    private  UsuarioService usuarioService;
 
     @GetMapping("/login")
     public String login(){

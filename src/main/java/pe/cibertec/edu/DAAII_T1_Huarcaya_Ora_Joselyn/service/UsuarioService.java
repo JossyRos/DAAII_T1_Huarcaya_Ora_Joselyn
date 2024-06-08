@@ -20,15 +20,13 @@ public class UsuarioService implements IUsuarioService {
     private RolRepository rolRepository;
 
     @Override
-    public List<Usuario> listasDeUsuarios() {
+    public List<Usuario> listarUsuarios() {
         return usuarioRepository.findAll();
     }
-
     @Override
-    public Usuario buscarUsuarioxId(Integer idusuario) {
+    public Usuario buscarUsuarioXId(Integer idusuario) {
         return usuarioRepository.findById(idusuario).orElse(null);
     }
-
     @Override
     public Usuario buscarUsuarioXNomUsuario(String nomusuario) {
         return usuarioRepository.findByNomusuario(nomusuario);
@@ -53,4 +51,5 @@ public class UsuarioService implements IUsuarioService {
                 usuario.getIdusuario()
         );
     }
+
 }
